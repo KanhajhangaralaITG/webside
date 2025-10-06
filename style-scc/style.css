@@ -349,6 +349,12 @@ div#sidePanel {
     color: white;
 }
 
+.image-text-card {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /*slayder ki scc sude bar*/
 .side-panel.open {
     right: 0;
@@ -543,7 +549,73 @@ div#sidePanel {
     font-size: 24px;
 }
 
+/* section-one css*/
+.page-width {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.card-imge img {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    height: 100%;
+}
+
+.card-imge {
+    width: calc(100% - 100px);
+    height: 604px;
+}
+
+.image-cards {
+    display: flex;
+    padding: 80px 30px;
+    gap: 19px;
+}
+
+.image-text-card {
+    background: wheat;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    padding: 43px;
+}
+
+.card-heding {
+    font-size: 33px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
 /*media quary css*/
+@media (max-width:1024px) {
+
+    .card-imge {
+        width: calc(100% - 11px);
+        height: calc(100%-11px);
+    }
+
+    .image-cards {
+        flex-direction: column;
+    }
+
+}
+
+
+
 @media (max-width:990px) {
     .navigations {
         display: none;
@@ -565,6 +637,15 @@ div#sidePanel {
 }
 
 @media (max-width:750px) {
+    .card-imge {
+        height: 80%;
+    }
+
+    .card-imge img {
+
+        height: 80%;
+    }
+
     div#sidePanel {
         width: 275px;
     }
@@ -578,6 +659,16 @@ div#sidePanel {
         width: 180px;
         height: 60px;
         min-width: 90px;
+
+        .card-imge img {
+            width: 100%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            object-fit: cover;
+            height: 100%;
+        }
+
         font-size: 12px;
         border-radius: 50px;
         background-color: var(--jdgm-primary-color);
@@ -623,15 +714,14 @@ div#sidePanel {
         object-fit: cover;
     }
 }
-
 .reponsive-berger {
     color: black;
 }
-
 @media (max-width:496px) {
     .berger-panale {
-   top:137px;
+        top: 137px;
     }
+
     .custom-button {
         top: 50%;
         right: 27%;
